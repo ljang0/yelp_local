@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px 48px;
+}
+
+.navbar {
+    background-color: lightgrey;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navdiv ul {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.navdiv a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 8px;
+    border-radius: 8px;
+}
+
+.navdiv a:hover,
+.navdiv a:focus-visible {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.navbar img {
+    height: clamp(24px, 4vw, 36px);
+    width: auto;
+    display: block;
+}
+
+footer {   
+    background-color: lightgrey;
+    color: #111;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.12);
+}
+
+footer h1 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Centered search card */
+#search.search-card {
+    width: 100%;
+    max-width: 720px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+#search.search-card:hover,
+#search.search-card:focus-within {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14), 0 6px 14px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+#search label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #111;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-row input[type="search"] {
+    flex: 1;
+    padding: 12px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-row input[type="search"]:hover,
+.search-row input[type="search"]:focus-visible {
+    border-color: #94a3b8;
+    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.15), inset 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.search-row button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.search-row button:hover,
+.search-row button:focus-visible {
+    background: #1e293b;
+}
+
+.search-row button:active {
+    transform: translateY(1px);
+}
