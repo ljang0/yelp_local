@@ -21,9 +21,12 @@
     <main>
         <section id="search" class="search-card">
             <label for="site-search"><strong>Enter any site and we'll <em>(locally)</em> clone it for you:</strong></label>
-            <div class="search-row">
-                <input type="search" id="site-search" name="q" placeholder="https://www.example.com" />
-                <button type="button"><em>Clone!</em></button>
+            <div class="search-group">
+                <div class="search-row">
+                    <input type="search" id="site-search" name="q" placeholder="Type a site name (e.g., a -> amazon, apple)" autocomplete="off" aria-label="Website search" />
+                    <button type="button"><em>Clone!</em></button>
+                </div>
+                <ul id="suggestions" class="suggestions" role="listbox" aria-label="Website suggestions" hidden></ul>
             </div>
         </section>
     </main>

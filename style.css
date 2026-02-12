@@ -110,12 +110,18 @@ footer h1 {
 .search-row {
     display: flex;
     gap: 10px;
-    align-items: center;
+    align-items: stretch;
+}
+
+.search-group {
+    position: relative;
 }
 
 .search-row input[type="search"] {
     flex: 1;
-    padding: 12px 12px;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 0 12px;
     border: 1px solid #cbd5e1;
     border-radius: 4px;
     font-size: 14px;
@@ -131,7 +137,9 @@ footer h1 {
 }
 
 .search-row button {
-    padding: 12px 16px;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 0 16px;
     border: none;
     border-radius: 4px;
     background: #0f172a;
@@ -149,4 +157,53 @@ footer h1 {
 
 .search-row button:active {
     transform: translateY(1px);
+}
+
+.suggestions {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    z-index: 50;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    max-height: 220px;
+    overflow-y: auto;
+    background: #fff;
+}
+
+.suggestions[hidden] {
+    display: none;
+}
+
+.suggestions li {
+    display: block;
+    margin: 0;
+}
+
+.suggestion-btn {
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: transparent;
+    padding: 10px 12px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.suggestion-btn:hover,
+.suggestion-btn:focus-visible,
+.suggestion-btn.is-active {
+    background: #e2e8f0;
+    outline: none;
+}
+
+.suggestion-domain {
+    color: #475569;
+    margin-left: 8px;
+    font-size: 12px;
 }
